@@ -2,6 +2,7 @@ import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import tailwind from 'eslint-plugin-tailwindcss';
 
 export default [
   { ignores: ['dist'] },
@@ -19,15 +20,19 @@ export default [
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      tailwindcss: tailwind,
     },
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      ...tailwind.configs.recommended,
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
+      'tailwindcss/classnames-order': 'warn', // Enforce consistent class order
+      'tailwindcss/no-custom-classname': 'off',
     },
   },
 ]

@@ -1,1 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
 @import "tailwindcss";
+
+.glass {
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+@layer utilities {
+	.bg-gradient-bg {
+		background-image: linear-gradient(135deg, #ff6b6b, #4fc3f7);
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-fade-in {
+	animation: fade-in 0.5s ease-in-out;
+}
