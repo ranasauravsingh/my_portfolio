@@ -159,6 +159,7 @@ const Contact = () => {
 							href="tel:+9429014277"
 							className="hover:text-sky-500 transition-colors"
 							aria-label="Phone number"
+							target="_blank"
 						>
 							<PhoneIcon className="h-6 w-6" />
 						</a>
@@ -166,6 +167,7 @@ const Contact = () => {
 							href="https://github.com/ranasauravsingh"
 							className="hover:text-sky-500 transition-colors"
 							aria-label="GitHub profile"
+							target="_blank"
 						>
 							<GithubIcon />
 						</a>
@@ -173,6 +175,7 @@ const Contact = () => {
 							href="https://www.linkedin.com/in/ranasauravsingh/"
 							className="hover:text-sky-500 transition-colors"
 							aria-label="LinkedIn profile"
+							target="_blank"
 						>
 							<LinkedInIcon />
 						</a>
