@@ -24,7 +24,7 @@ const Home = () => {
 	return (
 		<section
 			id="home"
-			className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4 sm:px-6 md:px-8 pt-16 sm:pt-20"
+			className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 px-4 sm:px-6 md:px-8 pt-12 sm:pt-20"
 		>
 			<MotionDiv
 				initial={{ opacity: 0, y: 50 }}
