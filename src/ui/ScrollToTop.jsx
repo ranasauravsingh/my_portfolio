@@ -30,7 +30,7 @@ const ScrollToTop = () => {
 	return (
 		<MotionButton
 			onClick={scrollToTop}
-			className={`fixed cursor-pointer bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-bg w-12 h-12 sm:w-12 sm:h-12 flex items-center justify-center rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ${
+			className={`fixed z-5 cursor-pointer bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-bg w-12 h-12 sm:w-12 sm:h-12 flex items-center justify-center rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ${
 				isVisible ? "opacity-100" : "opacity-0"
 			}`}
 			initial={{ scale: 0 }}
