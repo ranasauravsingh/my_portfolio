@@ -6,6 +6,7 @@ import Projects from "../components/Projects";
 import Technologies from "../components/Technologies";
 import Contact from "../components/Contact";
 import ScrollToTop from "../ui/ScrollToTop";
+import Resume from "../components/Resume";
 
 const Portfolio = () => {
 	return (
@@ -16,6 +17,7 @@ const Portfolio = () => {
 			<About />
 			<Projects />
 			<Technologies />
+			<Resume />
 			<Contact />
 			<Footer />
 		</div>
