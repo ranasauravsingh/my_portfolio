@@ -13,6 +13,7 @@ const Contact = () => {
 	});
 	const [errors, setErrors] = useState({});
 	const [showToast, setShowToast] = useState(false);
+	const [isEmailSent, setIsEmailSent] = useState(false);
 
 	const validateForm = () => {
 		const newErrors = {};
@@ -39,6 +40,7 @@ const Contact = () => {
 	};
 
 	const handleSubmit = (e) => {
+		setIsEmailSent(true);
 		e.preventDefault();
 
 		const validationErrors = validateForm();
@@ -63,6 +65,9 @@ const Contact = () => {
 			.catch((error) => {
 				console.error("Failed to send email:", error);
 				alert("Failed to send details. Please try again.");
+			})
+			.finally(() => {
+				setIsEmailSent(false);
 			});
 	};
 
@@ -131,6 +136,7 @@ const Contact = () => {
 								)}
 							</div>
 							<button
+								disabled={isEmailSent}
 								onClick={handleSubmit}
 								className="w-full cursor-pointer bg-gradient-bg text-white py-3 rounded-lg hover:bg-coral-600 transition-colors duration-300"
 							>
