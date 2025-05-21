@@ -5,7 +5,7 @@ import { MotionDiv, MotionH2 } from "../config/motion";
 const Projects = () => {
 	const projects = [
 		{
-			title: "Devtinder",
+			title: "DevTinder",
 			description: (
 				<>
 					A networking platform for developers built with the{" "}
