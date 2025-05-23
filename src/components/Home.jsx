@@ -56,6 +56,7 @@ const getPatternAnimation = (index) => {
 			x: [0, radius, 0, -radius, 0], // Cosine-based
 			y: [0, radius / 2, 0, -radius / 2, 0], // Sine-based, half amplitude
 			rotate: [0, 360], // Continuous rotation
+			opacity: 0.65,
 			transition: {
 				x: { duration, repeat: Infinity, ease: "linear" },
 				y: { duration: duration / 2, repeat: Infinity, ease: "linear" },
@@ -72,6 +73,7 @@ const getPatternAnimation = (index) => {
 			x: [0, radius, 0, -radius, 0], // Cosine-based
 			y: [0, radius, 0, -radius, 0], // Sine-based, 90° phase shift
 			rotate: [0, 360], // Continuous rotation
+			opacity: 0.65,
 			transition: {
 				x: { duration, repeat: Infinity, ease: "linear" },
 				y: {
@@ -126,7 +128,7 @@ const Home = () => {
 				{techLogos?.map((logo, index) => (
 					<MotionDiv
 						key={logo.alt}
-						className="absolute w-20 h-20 sm:w-24 sm:h-24 opacity-50"
+						className="absolute w-20 h-20 sm:w-24 sm:h-24"
 						initial={{ x: 0, y: 0, opacity: 1 }}
 						animate={controls[index]}
 					>
