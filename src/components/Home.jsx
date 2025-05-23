@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAnimation } from "framer-motion";
 
-import { MotionDiv } from "../config/motion";
+import { MotionDiv, MotionImage } from "../config/motion";
 import profilePic from "../assets/ProfilePic.png";
 import {
 	FigmaIcon,
@@ -95,6 +95,8 @@ const getPatternAnimation = (index) => {
 const Home = () => {
 	const fullName = `Sauravsingh Rana`;
 	const [displayedText, setDisplayedText] = useState("");
+	const [isImageLoaded, setIsImageLoaded] = useState(false);
+
 	const controls = techLogos?.map(() => useAnimation());
 
 	useEffect(() => {
@@ -142,10 +144,19 @@ const Home = () => {
 				transition={{ duration: 1 }}
 				className="text-center overflow-visible"
 			>
-				<img
+				<MotionImage
 					src={profilePic}
 					alt="Sauravsingh Rana Profile"
 					className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-6 shadow-lg block object-cover relative z-10"
+					// style={{ filter: "blur(8px)" }} // Initial blur
+					loading="lazy"
+					initial={{ opacity: 0.3, filter: "blur(8px)" }}
+					animate={{
+						opacity: isImageLoaded ? 1 : 0.3,
+						filter: isImageLoaded ? "blur(0px)" : "blur(8px)",
+					}}
+					transition={{ opacity: { duration: 0.5 }, filter: { duration: 0.5 } }}
+					onLoad={() => setIsImageLoaded(true)}
 				/>
 				<h1 className="text-3xl sm:text-5xl font-extrabold mb-4 font-inter leading-normal sm:leading-normal isolate">
 					Hi, I'm{" "}
