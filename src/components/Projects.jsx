@@ -5,7 +5,7 @@ import { MotionDiv, MotionH2 } from "../config/motion";
 const Projects = () => {
 	const projects = [
 		{
-			title: "DevTinder",
+			title: "Dev Tinder",
 			description: (
 				<>
 					A networking platform for developers built with the{" "}
@@ -21,7 +21,7 @@ const Projects = () => {
 			link: "https://devtinder.ranasauravsingh.site",
 		},
 		{
-			title: "JobPortal",
+			title: "Job Portal",
 			description: (
 				<>
 					A job portal web app developed with{" "}
@@ -45,8 +45,8 @@ const Projects = () => {
 			title: "Luxury by Meera",
 			description: (
 				<>
-					A client-based real estate website using the{" "}
-					<span className="font-bold">MERN stack</span>. Features{" "}
+					A <span className="font-bold">client-based</span> real
+					estate website using the MERN stack. Features{" "}
 					<span className="font-bold">
 						Firebase SMS OTP authentication
 					</span>{" "}
