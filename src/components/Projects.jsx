@@ -39,7 +39,7 @@ const Projects = () => {
 					for student and recruiter workflows.
 				</>
 			),
-			link: "https://ranasauravsingh.github.io/job_portal_frontend/",
+			link: "https://jobportal.ranasauravsingh.site",
 		},
 		{
 			title: "Luxury by Meera",
@@ -57,7 +57,7 @@ const Projects = () => {
 					integrations.
 				</>
 			),
-			link: "https://luxurybymeera.com",
+			link: "https://luxurybymeera.ranasauravsingh.site",
 		},
 	];
 
