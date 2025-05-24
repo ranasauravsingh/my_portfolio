@@ -10,12 +10,10 @@ const Projects = () => {
 				<>
 					A networking platform for developers built with the{" "}
 					<span className="font-bold">MERN stack</span>. Features{" "}
-					<span className="font-bold">real-time Chat</span> via{" "}
-					<span className="font-bold">socket.io</span>, modular{" "}
-					<span className="font-bold">React</span> components, and
-					test payment integration using
-					<span className="font-bold"> Razorpay</span> for
-					subscriptions.
+					<span className="font-bold">real-time Chat</span>{" "}
+					messaging between your connections via{" "}
+					<span className="font-bold">socket.io</span>{" "}and with modular{" "}
+					<span className="font-bold">React</span> components architecture.
 				</>
 			),
 			link: "https://devtinder.ranasauravsingh.site",
